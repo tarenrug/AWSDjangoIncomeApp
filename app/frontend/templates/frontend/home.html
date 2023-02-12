@@ -1,0 +1,25 @@
+{% extends "frontend/base.html" %}
+{% block content %}
+        <h2>
+            Welcome to the Income & Expenditure Website!
+        </h2>
+        <br>
+        {% if user.is_authenticated %}
+        <h4>Please create a new statement to get started! To do this, click on 'Register Statement'.</h4>
+        {% else %}
+        <h4>Please register an account to get started!</h4>
+        {% endif %}
+        <div class="col-md-12">
+            <p style="font-size:20px">
+                <br>
+                This website enables you to view your Income and Expenditure Ratio, while associating a grade with your ratio.
+                <br>
+                Once you sign up, you can input your Income and Expenditure into the form provided.
+            </p>
+            <p style="font-size:20px"> The formula for the Income and Expenditure Ratio is defined below:</p>
+
+                <p style="font-size:30px">I&E Rating = <sup>Expenditure</sup>&frasl;<sub>Income</sub></p>
+                
+            </p>
+        </div>
+        {% endblock content %}

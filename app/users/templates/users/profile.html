@@ -1,0 +1,24 @@
+{% extends "frontend/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+        {% if user.is_authenticated %}
+        <div class="content-section">
+                <h3>Welcome {{first_name}}! Your Details:</h3>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-light">Username: {{username}}</li>
+                    <li class="list-group-item list-group-item-light">First Name: {{first_name}}</li>
+                    <li class="list-group-item list-group-item-light">Last Name: {{last_name}}</li>
+                    <li class="list-group-item list-group-item-light">Email: {{email}}</li>
+                    <li class="list-group-item list-group-item-light">Phone Number: {{phone_number}}</li>
+                    <li class="list-group-item list-group-item-light">Date Of Birth: {{date_of_birth}}</li>
+                    <li class="list-group-item list-group-item-light">
+                        Address: {{address_line_1}}
+                        <br> &emsp; &emsp; &emsp; &thinsp; {{address_line_2}}
+                        <br> &emsp; &emsp; &emsp; &thinsp; {{city}}
+                        <br> &emsp; &emsp; &emsp; &thinsp; {{postcode}}
+                    </li>
+                </ul>
+        {% endif %}
+    </div>
+</p>
+{% endblock content %}
